@@ -78,16 +78,19 @@ public class SingleLinkedList<T> {
 	
 	//Deleting a Node from LinkedList
 	public void delete(T data) {
-		Node<T> node=head;
+		Node<T> currentNode=head;
+		Node<T> previousNode=head;
 		if(data==head.data) {
 			head=head.next;
 			return;
 		}
-		while(node!=null) {
-			if(node.data==data) {
-				
+		while(currentNode!=null) {
+			if(currentNode.data==data) {
+				previousNode.next=currentNode.next;
+				if(currentNode==tail) tail=previousNode;
 			}
-			node=node.next;
+			previousNode=currentNode;
+			currentNode=currentNode.next;
 		}
 	}
 	//Display The List
@@ -121,9 +124,10 @@ public class SingleLinkedList<T> {
 		singleLinkedList.add(20);
 		singleLinkedList.add(4);
 		singleLinkedList.add(11);
-		singleLinkedList.addAfter(10, 9);
-		singleLinkedList.addBefore(2, 3);
-		singleLinkedList.addFirst(12);
+		//singleLinkedList.addAfter(10, 9);
+		//singleLinkedList.addBefore(2, 3);
+		//singleLinkedList.addFirst(12);
+		singleLinkedList.delete(11);
 		singleLinkedList.displayLinkedList();
 		System.out.println("Head of LikedList: "+singleLinkedList.getHead());
 		System.out.println("Tail of LikedList: "+singleLinkedList.getTail());
