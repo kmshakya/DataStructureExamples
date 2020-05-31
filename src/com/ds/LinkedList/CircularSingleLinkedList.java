@@ -2,12 +2,12 @@ package com.ds.LinkedList;
 
 public class CircularSingleLinkedList<T> {
 	
-	private Node<T> head;
-	private Node<T> tail;
+	public Node<T> head;
+	public Node<T> tail;
 
-	private class Node<t>{
-		T data;
-		Node<T> next;
+	public class Node<t>{
+		public T data;
+		public Node<T> next;
 		public Node(T data){
 			this.data=data;
 			this.next=null;
@@ -48,12 +48,12 @@ public class CircularSingleLinkedList<T> {
 		}
 	}
 	//Get Head
-	public T getHead() {
-		return this.head.data;
+	public Node<T> getHead() {
+		return this.head;
 	}
 	//Get Tail
-	public T getTail() {
-		return this.tail.data;
+	public Node<T> getTail() {
+		return this.tail;
 	}
 	
 	public static void main(String[] args) {
