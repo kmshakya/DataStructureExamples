@@ -1,6 +1,7 @@
 package com.ds.LinkedList.algoExmp;
 
 import java.util.HashSet;
+import java.util.TreeMap;
 
 import com.ds.LinkedList.CircularSingleLinkedList;
 
@@ -15,6 +16,8 @@ public class LoopDetectionInLinkedList extends CircularSingleLinkedList<Integer>
 		linkedList.add(40);
 		System.out.println("Is Loop Detected(Hashing) : "+detectionInLinkedList.detectLoopUsingHashing(linkedList));
 		System.out.println("Is Loop Detected(TwoPointer) : "+detectionInLinkedList.detectLoopUsingTwoPointer(linkedList));
+		//TreeMap<Integer,Integer> treeMap=new TreeMap<Integer,Integer>();
+		
 
 	}
 	//Using Hashing detect Loop
