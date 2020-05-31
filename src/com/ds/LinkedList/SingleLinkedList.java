@@ -3,14 +3,14 @@ package com.ds.LinkedList;
 
 public class SingleLinkedList<T> {
 	
-	Node<T> head=null;
-	Node<T> tail=null;
+	public Node<T> head=null;
+	public Node<T> tail=null;
 	
 	//Private Class to represent the nodes
 	@SuppressWarnings("hiding")
-	private class Node<T>{
-		T data;
-		Node<T> next;
+	public static class Node<T>{
+		public T data;
+		public Node<T> next;
 		public Node(T data) {
 			super();
 			this.data = data;
@@ -102,13 +102,13 @@ public class SingleLinkedList<T> {
 		}
 	}
 	//Returns Head Data
-	public T getHead() {
-		return head.data;
+	public Node<T> getHead() {
+		return head;
 	}
 	
 	//Returns Tail Data
-	public T getTail() {
-		return tail.data;
+	public Node<T> getTail() {
+		return tail;
 	}
 	
 	//Returns true if empty
@@ -129,8 +129,8 @@ public class SingleLinkedList<T> {
 		//singleLinkedList.addFirst(12);
 		singleLinkedList.delete(11);
 		singleLinkedList.displayLinkedList();
-		System.out.println("Head of LikedList: "+singleLinkedList.getHead());
-		System.out.println("Tail of LikedList: "+singleLinkedList.getTail());
+		System.out.println("Head of LikedList: "+singleLinkedList.getHead().data);
+		System.out.println("Tail of LikedList: "+singleLinkedList.getTail().data);
 		System.out.println("Is LinkedList Empty ? "+singleLinkedList.isEmpty());
 		
 	}
